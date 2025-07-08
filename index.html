@@ -8,7 +8,6 @@
       * {
         margin: 10px;
         padding: 10px;
-        background: fixed;
         box-sizing: border-box;
       }
       html {
@@ -16,22 +15,41 @@
       }
       body {
         background: linear-gradient(to right, #8e2de2, #4a00e0);
-      }
-
-      h1,
-      h2,
-      h3 {
-        text-align: center;
         color: #333;
         font-family: Arial, sans-serif;
       }
+
+      h1, h2, h3 {
+        text-align: center;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 5px 0;
+        font-weight: bold;
+      }
+
       div {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+      }
+
+      a {
+        color: #42f50b;
         text-decoration: none;
       }
+
+      a:hover {
+        color: #00f014;
+        text-decoration: underline;
+      }
+
       .button1 {
         background-color: green;
         color: white;
@@ -46,17 +64,11 @@
         text-align: center;
         line-height: 60px;
         text-decoration: none;
+        margin-bottom: 10px;
       }
+
       .button1:hover {
         background-color: #4caf50;
-      }
-      a {
-        color: #42f50b; /* blue */
-        text-decoration: none; /* optional: removes underline */
-      }
-      a:hover {
-        color: #00f014; /* darker blue on hover */
-        text-decoration: underline; /* optional: underline on hover */
       }
     </style>
   </head>
@@ -67,44 +79,29 @@
 
     <div>
       <ul>
-        <li><a href="https://aliawab.vercel.app">Ali Awab's Website</a></li>
-        <li>
-          <a href="https://gynaetelecare.com">Mehvish's Second Website</a>
-        </li>
-        <li><a href="https://markresume.vercel.app">Mark's Website</a></li>
-        <li>
-          <a href="https://soft42111.github.io/ayesha/">Ayesha's Website</a>
-        </li>
+        <li><a href="https://aliawab.vercel.app" target="_blank">Ali Awab's Website</a></li>
+        <li><a href="https://gynaetelecare.com" target="_blank">Mehvish's Second Website</a></li>
+        <li><a href="https://markresume.vercel.app" target="_blank">Mark's Website</a></li>
+        <li><a href="https://soft42111.github.io/ayesha/" target="_blank">Ayesha's Website</a></li>
       </ul>
     </div>
 
-    <h2>
-      Now as I have shared the website's link above I will share the download
-      buttons for their files!
-    </h2>
+    <h2>Now download the project files:</h2>
 
-    <div class="AliAwab">
-      <h3>Here is Ali's website download button:</h3>
-      <!-- This must link to a .zip file -->
-      <a href="Ali-Awab.zip" download class="button1"
-        >Download Ali Awab Folder</a
-      >
+    <div>
+      <h3>Download Ali's Website Folder:</h3>
+      <a href="Ali-Awab.zip" download class="button1">Download Ali Awab Folder</a>
 
-      <h3>Here is Ali's website download button:</h3>
-      <!-- This must link to a .zip file -->
-      <a href="Mehvish.zip" download class="button1"
-        >Download Mehvish Resources</a
-      >
+      <h3>Download Mehvish's Website Resources:</h3>
+      <a href="Mehvish.zip" download class="button1">Download Mehvish Resources</a>
 
-      <h3>Here is Ali's website download button:</h3>
-      <!-- This must link to a .zip file -->
+      <h3>Download Mark's Website Folder:</h3>
       <a href="Mark.zip" download class="button1">Download Mark Folder</a>
 
-      <h3>Here is Ali's website download button:</h3>
-      <!-- This must link to a .zip file -->
+      <h3>Download Ayesha's Website Folder:</h3>
       <a href="Ayesha.zip" download class="button1">Download Ayesha Folder</a>
-
-      <h1>So, Thanks for visiting my website, Thank You!</h1>
     </div>
+
+    <h1>Thanks for visiting my website, Thank You!</h1>
   </body>
 </html>
