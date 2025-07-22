@@ -122,15 +122,21 @@
   
   /* Footer */
   footer {
-    background: none; /* Removes background color */
+    background: none;
     color: white;
     text-align: center;
     padding: 40px 20px;
     font-weight: bold;
     width: 100%;
-    border-top: 1px solid #ccc; /* Thin line above the footer */
+    border-top: 1px solid #ccc;
     margin-top: 40px;
   }
+  
+  /* Light theme footer color */
+  body.light-theme footer {
+    color: black;
+  }
+  
   
   
   
