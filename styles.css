@@ -1,0 +1,150 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Typography and Base Styles */
+  body {
+    background-color: #36454f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 1rem;
+  }
+  
+  /* Toggle Theme Button */
+  .toggleThemeBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .toggleThemeBtn:hover {
+    background-color: #888;
+  }
+  
+  /* Website Section */
+  .siteBlock {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .siteBlock h2 a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .siteBlock h2 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Download Button Style */
+  .downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 15px 25px;
+    background-color: rgba(0, 128, 0, 0.7);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .downloadBtn i {
+    font-size: 1.2rem;
+  }
+  
+  .downloadBtn:hover {
+    background-color: rgba(136, 4, 107, 0.784);
+    transform: scale(1.05);
+    color: white;
+  }
+  
+  /* Tooltip (using title) */
+  .downloadBtn[title] {
+    position: relative;
+  }
+  .downloadBtn[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 130%;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    opacity: 0.85;
+  }
+  
+  /* Light Theme Styles */
+  body.light-theme {
+    background-color: #f3f3f3;
+    color: #111;
+  }
+  
+  body.light-theme .siteBlock h2 a {
+    color: #111;
+  }
+  body.light-theme .downloadBtn {
+    background-color: #48a847;
+    color: white;
+  }
+  body.light-theme .downloadBtn:hover {
+    background-color: #7a1685;
+    color: #fff;
+  }
+  
+  /* Footer */
+  footer {
+    background: none; /* Removes background color */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-weight: bold;
+    width: 100%;
+    border-top: 1px solid #ccc; /* Thin line above the footer */
+    margin-top: 40px;
+  }
+  
+  
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .downloadBtn {
+      width: 90%;
+      font-size: 0.9rem;
+      padding: 12px 20px;
+    }
+  
+    .intro {
+      font-size: 0.9rem;
+      padding: 0 10px;
+    }
+  }
+  
