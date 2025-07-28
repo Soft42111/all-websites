@@ -7,53 +7,105 @@
   
   /* Typography and Base Styles */
   body {
-    background-color: #36454f;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Poppins', sans-serif;
     color: white;
+    padding: 40px 20px;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     padding: 20px;
-    transition: background-color 0.3s ease;
   }
   
   h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+    }
+    to {
+      text-shadow: 0 0 20px rgba(78, 205, 196, 0.8);
+    }
   }
   
   .intro {
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #a0a0a0;
   }
   
   /* Toggle Theme Button */
   .toggleThemeBtn {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #555;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    border-radius: 30px;
     cursor: pointer;
     z-index: 999;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
   }
   .toggleThemeBtn:hover {
-    background-color: #888;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   
   /* Website Section */
   .siteBlock {
     text-align: center;
     margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transform: translateY(0);
+    transition: all 0.3s ease;
   }
+
+  .siteBlock:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
   .siteBlock h2 a {
     color: #ffffff;
     text-decoration: none;
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   .siteBlock h2 a:hover {
-    text-decoration: underline;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
   }
   
   /* Download Button Style */
@@ -61,18 +113,19 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
-    padding: 15px 25px;
-    background-color: rgba(0, 128, 0, 0.7);
-    color: black;
+    gap: 12px;
+    margin-top: 15px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    border: 2px solid transparent;
   }
   
   .downloadBtn i {
@@ -80,9 +133,9 @@
   }
   
   .downloadBtn:hover {
-    background-color: rgba(136, 4, 107, 0.784);
-    transform: scale(1.05);
-    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
   }
   
   /* Tooltip (using title) */
@@ -122,14 +175,27 @@
   
   /* Footer */
   footer {
-    background: none;
-    color: white;
     text-align: center;
-    padding: 40px 20px;
-    font-weight: bold;
-    width: 100%;
-    border-top: 1px solid #ccc;
-    margin-top: 40px;
+    margin-top: 50px;
+    padding: 20px;
+    color: #888;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
+  footer p {
+    font-size: 1.1rem;
+  }
+
+  footer .fa-heart {
+    color: #ff6b6b;
+    animation: heartbeat 1.5s ease infinite;
+  }
+
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
   }
   
   /* Light theme footer color */
